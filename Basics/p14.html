@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>FOR Loop</h2>
+        <p>A for loop repeats until specified condition evaluates to false.</p>
+    </center>
+    <label for="tableNumber">Select what table you want</label> <br>
+    <select name="" id="tableNumber">
+        <option value="" disabled selected>Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+    </select>
+    <button onclick="tablegenerator()">generate table</button>
+    <table id="testTable" border="1" cellpadding="10" cellspacing="0">
+   <tr>
+    <th>The i value is</th>
+   </tr>
+    </table>
+
+    <script>
+        var i = 0; 
+        //for(initialization condition increment or decrement ){
+
+        //}
+        function tablegenerator(){
+            var table = document.getElementById('testTable');
+            var selectNumber = document.getElementById('tableNumber').value;
+            table.innerHTML = `
+            <caption>Table Generator AI</caption>
+            <tr> <th>Head</th>
+                </tr>`
+        
+        
+        for( var i = 1; i<10; i++){
+           table.innerHTML += `<tr>
+            <td>${selectNumber} * ${i} = ${i*selectNumber}</td>
+            </tr>`
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            border: 2px solid black;
+            width: 400px;
+            height: 300px;
+            position: relative;
+        }
+        .container img{
+            width: 100%;
+            height: 290px;
+        }
+        button{
+            padding: 20px;
+            font-size: 2rem;
+       width: 50px;
+       height: 50px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: black;
+       color: aliceblue;
+        }
+         .next{
+          
+            position: absolute;
+             right: -30px;
+             top: 50%;
+             transform: translateY(-50%);
+         }
+         .prev{
+           
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+         }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <img src="" alt="" id="image">
+    <button onclick="PrevButton()" class="prev"><</button>
+    <button onclick="NextButton()" class="next">></button>
+   </div>
+    <script>
+        let image = document.getElementById('image');
+        let present = 0;
+
+        function carouselChecker(){
+            switch(present){
+                case 1:
+                     image.src = "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="
+                break;
+                case 2:
+                    image.src = "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+                    break;
+                 case 3:
+                     image.src = "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"
+                     break;
+                     case 4:
+                     image.src = "https://media.gettyimages.com/id/1333203094/photo/an-aerial-view-of-vidhan-soudha-and-high-court-building-in-bangalore.jpg?s=1024x1024&w=gi&k=20&c=wFis-c1bAQNTpyfas55JqIdnD6tZusL0P0LenpaBL1E="
+                break;  
+                default:
+                   image.src = "https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-5529.jpg?t=st=1709009149~exp=1709012749~hmac=3e1e35b67a85ccb8afaba2176d45d277647d35984702eea723a25dda339d6959&w=740"
+                   break;
+           }
+        }
+        function NextButton(){
+            present++
+            console.log(present)
+            carouselChecker()
+        }
+        function PrevButton(){
+             if(present>1){
+                present--
+                console.log(present)
+            carouselChecker()
+             }
+            }
+            carouselChecker()
+    </script>
+</body>
+</html>

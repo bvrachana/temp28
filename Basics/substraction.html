@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card{
+            width: 260px;
+            padding: 20px;
+            height: 300px;
+            background-color: #f80606;
+        }
+        .card input{
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .card button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <input type="text" placeholder="enter the first number" id="firstnumber" required>
+            <input type="text" placeholder="enter the second number" id="secondnumber" required>
+           <button type="button" onclick="hello()">calculate</button>
+           <span>Result</span>
+           <p id="result"></p>
+        </div>
+    </div>
+    <script>
+         function hello(){
+            var firstnumber = document.getElementById('firstnumber').value;
+            var secondnumber = document.getElementById('secondnumber').value;
+           document.getElementById('result').innerText= parseInt(firstnumber) - parseInt(secondnumber);
+        }
+    </script>
+</body>
+</html>

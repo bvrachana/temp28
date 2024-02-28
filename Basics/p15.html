@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+  <center>
+    <h1>Variable scope</h1>
+  </center>  
+  <div id="result"></div>
+  <script>
+    //We have 3 types of variables(keywords)
+    // var
+    //let
+    //const
+    //the var keyword is the global scope
+    //the const and let is introduced in 2015 and the let and const are the local scope (block scope)
+
+    let x = 15;
+    var result = document.getElementById('result')
+    if(x>10){
+        var result = document.getElementById('result')
+        let a = 10;
+        var b = 30;
+        result.innerHTML += `<h1>the variable a value is <span style= "color:green">${a}</span></h1>`
+        result.innerHTML += `<h1>the variable b value is <span style= "color:green">${b}</span></h1>`
+        result.innerHTML += `<h1>the variable x value is <span style= "color:green">${x}</span></h1>`
+         }
+    result.innerHTML = "<h1>outside of the if condition</h1>"
+    try{
+        result.innerHTML += `<h1>the variable a value is <span style= "color:green">${a}</span></h1>`
+    }catch(error){
+       result.innerHTML += `<h1 style = "color:red">${error}😊</h1>` 
+    }
+    b = 40;
+    try{
+        c = 30;
+        result.innerHTML += `<h1>the variable c value is <span style= "color:green">${c}</span></h1>`
+    }catch(error){
+       result.innerHTML += `<h1 style = "color:red">${error}😊</h1>` 
+    }
+       result.innerHTML += `<h1>the variable b value is <span style= "color:green">${b}😎</span></h1>`
+        result.innerHTML += `<h1>the variable x value is <span style= "color:green">${x}😎</span></h1>`
+  </script>
+</body>
+</html>

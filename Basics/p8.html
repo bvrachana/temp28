@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Basics</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            padding: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            width: 300px;
+        }
+        .card input{
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .card input:hover{
+            background-color: rgba(125, 117, 117, 0.534);
+        }
+        button{
+            width: 100%;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(255, 0, 0, 0.534);
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        button:hover{
+            border: 1px solid rgba(255, 0, 0, 0.534);
+            background-color: transparent;
+            transition: 0.3s;
+            color: rgba(255, 0, 0, 0.534);
+            cursor: pointer;
+        }
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Special day checker</h1>
+            <img src="" alt="" id="image" width="200">
+            <!-- <input type="text" placeholder="Enter date to check special day" id="date">
+            <p id="result"> -->
+                <select name="days" id="days">
+                    <option value="" disabled selected>----select days------</option>
+                    <option value="1">New Year</option>
+                    <option value="26">Republic day</option>
+                </select>
+           </p>
+            <button onclick="checker()">Check</button>
+        </div>
+    </div>
+    <script>
+    //  function specialdateChecker(){
+    //  var date = document.getElementById('date').value;
+    //  var image = document.getElementById('image');
+
+    //  if(parseInt(date) ==1){
+    //     alert('this day is new year...!')
+    //     image.src= "https://img.freepik.com/free-photo/happy-new-year-banner-with-fireworks_23-2149539969.jpg?size=626&ext=jpg&ga=GA1.1.1325063738.1703091014&semt=ais"
+    // }
+    //  else if(parseInt(date) ==26){
+    //     image.src = "https://i.pinimg.com/originals/e4/65/ef/e465ef1718eb16fa3539dd5d6c30f753.jpg"
+    //     alert('this day is Republic day...!')
+    //  }
+    //  else{
+    //   image.src='https://img.freepik.com/free-photo/alert-sign-front-side-white-background_187299-40236.jpg?size=626&ext=jpg&ga=GA1.1.1325063738.1703091014&semt=ais'
+    //   image.style.width = '50px'
+    //  }
+    // }
+    function checker(){
+        var days = document.getElementById('days').value;
+        var result = document.getElementById('result');
+        var image = document.getElementById('image');
+        if(days == ""){
+            day.style.border = "2px solid red"
+            result.innerText = "please selct any option selcted"
+            alert('please select any option to continue...')
+        }
+        else if(days == 1){
+         alert('the date of new year is 1st jan')
+         image.src= "https://img.freepik.com/free-photo/happy-new-year-banner-with-fireworks_23-2149539969.jpg?size=626&ext=jpg&ga=GA1.1.1325063738.1703091014&semt=ais"
+        }
+        else if(days == 26){
+         alert('the date of new year is 26th jan')
+        }
+    }
+    </script>
+</body>
+</html>
