@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="" id="bulb">
+    <button onclick="onbulb()">on</button>
+    <button onclick="offbulb()">off</button>
+
+    <script>
+        let image = document.getElementById('bulb');
+   function onbulb(){
+       image.setAttribute('src', "https://img.freepik.com/free-vector/light-bulb_78370-520.jpg?t=st=1709179862~exp=1709183462~hmac=cef417bc7e32e64dd95b36057134e225b1e213520b0fdaee0211c9291d714fca&w=740")
+   }
+   function offbulb(){
+       image.setAttribute('src', "https://img.freepik.com/free-vector/realistic-light-bulb-isolated_1284-41741.jpg?t=st=1709179879~exp=1709183479~hmac=e47bb0560ccdf070b4d577e40cd31fdffabec9cb65ec77b335264fdd84386a3b&w=740")
+   }
+    </script>
+</body>
+</html>

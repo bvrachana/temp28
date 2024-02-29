@@ -3,79 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    </style>
+    <title>JS BASICS</title>
 </head>
 <body>
     <center>
-        <h1>Type Conversion</h1>
+        <h1>COVERTING VALUES TO NUMBERS</h1>
     </center>
-    <hr>
-
+      <!-- <h1>3 <sub>1</sub></h1> -->
     <div id="result">
 
     </div>
 
 
-
-
-
-
     <script>
-        var result = document.getElementById('result');
-        let x1 = "10";
-        result.innerHTML += `<h1> x1 = ${x1} and type is <span style="color:green">${typeof(x1)}</span></h1> <hr>`
+        
+        let str = "123"
+        let result = document.getElementById('result')
+        result.innerHTML += "<h1>converting values to numbers</h1> <hr>"
 
-        //converting string to number using +
-        let y1 = +"10";
+        result.innerHTML +=`<h1>str variable<span style="color:green"> ${typeof(str)} value is ${str}</span></h1>` //output:string
+        let num = Number(str)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(num)} value is ${num}</span></h1>`+ //output:number
 
-        result.innerHTML += `<h1> y1 = ${y1} and type is <span style="color:green">${typeof(y1)}</span></h1>`
+        let a = "123.90"
+        result.innerHTML += "<h1>converting values to numbers</h1> <hr>"
 
-        let a = +"10" //number
-        let b = +"10"  //number
+        result.innerHTML +=`<h1>str variable<span style="color:green"> ${typeof(str)} value is ${str}</span></h1>` //output:123.90
+        let floatNum = Number(str)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(floatNum)} value is ${floatNum}</span></h1>` //output:123
+        
+        let a1 = parseInt(a)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(a1)} value is ${a1}</span></h1>` //output:123
 
-         result.innerHTML += `<h1> y1 = ${a} + ${b} = ${a+b} and type is <span style="color:green">a = ${typeof(a)} and b = ${typeof(b)}</span></h1>`
+        let a2 = parseFloat(a1)
+        result.innerHTML +=`<h1>string to number str variable<span style="color:green"> ${typeof(a2)} value is ${a2}</span></h1>` //output:123
+
+        let largeValue = 12345.625654545
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue}</span></h1>` //output: 12345.625654545
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed()}</span></h1>` //output: 12345
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(1)}</span></h1>` //output: 12345.6
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(2)}</span></h1>` //output: 12345.62
+
+        result.innerHTML +=`<h1>largeValue variable value is <span style="color:green"> ${largeValue.toFixed(4)}</span></h1>` //output: 12345.6256
 
 
-         //converting number to string
-
-         let x2 = 10;  //type is the number
-         result.innerHTML += `<h1> x2 = ${x2} and type is <span style="color:green">${typeof(x2)}</span></h1>`
-
-         let y2 = x2 + "";  //coverting number to string
-         result.innerHTML += `<h1> y2 = ${y2} and type is <span style="color:green">${typeof(y2)}</span></h1>`
-
-         let x3 = "40"; //type is string
-         result.innerHTML += `<h1> x3 = ${x3} and type is <span style="color:green">${typeof(x3)}</span></h1>`
-         let y3 = x3-10;
-         result.innerHTML += `<h1> y3 = ${y3} and type is <span style="color:green">${typeof(y3)}</span></h1>`
 
 
-        //  mathemaical expressions between string and number 
-        result.innerHTML += `<hr><h1> "3" - 2   = <span style="color:green">${"3"-2}</span></h1> <hr>` //output is 1 and type is number
+        //returning values using Number()
+        result.innerHTML += `<h1>true to number ${Number(false)}</h1>`//0
 
-        result.innerHTML += `<hr><h1> "3" = 2   = <span style="color:green">${"3"+2}</span></h1> <hr>` //output is 32 (+ is a concatinating operator) type is string
+        result.innerHTML += `<h1>true to number ${Number(true)}</h1>`//1
 
-        result.innerHTML += `<hr><h1> 3 + "2" =    = <span style="color:green">${3+"2"}</span></h1>` //output is 6 and type is number
 
-        result.innerHTML += `<hr><h1> "3" + "2" =    = <span style="color:green">${"3" * "2"}</span></h1>`//output is 6 and type is number
+        result.innerHTML += `<h1>true to number ${Number(null)}</h1>`//0
 
-        result.innerHTML += `<hr><h1> "3" + 2 =    = <span style="color:green">${"3" * 2}</span></h1>`//output is 6 and type is number
+        result.innerHTML += `<h1>true to number ${Number("123")}</h1>`//123 but type is number
 
-        result.innerHTML += `<hr><h1> 3 + "2" =    = <span style="color:green">${3 * "2"}</span></h1>` //output is 6 and type is number
+        result.innerHTML += `<h1>true to number ${Number("  ")}</h1>`//0
 
-        result.innerHTML += `<hr><h1> "10"+ "2" =    = <span style="color:green">${"10" / "2"}</span></h1>` //output is 5 and tyope is number
+        result.innerHTML += `<h1>true to number ${Number("")}</h1>`//0
 
-        result.innerHTML += `<hr><h1> "10"+ 2 =    = <span style="color:green">${"10" / 2}</span></h1>` //output is 5 and type is number
+        result.innerHTML += `<h1>true to number ${Number("123e-1")}</h1>`//12.3
+
+
+        result.innerHTML += `<h1>true to number ${Number("hhh")}</h1>`//NaN
+
+
+        result.innerHTML += `<h1>true to number ${Number("THIS IS A WORD")}</h1>`//NaN
+
+        result.innerHTML += `<h1>true to number ${Number("NULL")}</h1>`//NaN
+
+        result.innerHTML += `<h1>true to number ${Number("UNDEFINED")}</h1>`//0
+
+
+
+
+
+
+
+
+        
+
+        
+        
     </script>
-    
-
-
-
     
 </body>
 </html>

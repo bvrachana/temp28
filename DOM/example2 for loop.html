@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <input type="number" id="num" placeholder="enter number"> 
+    <!-- <input type="url" id="num" placeholder="enter url"> -->
+
+    <button onclick="textGenerater()">Generate text</button>
+
+
+    <div id="result">
+
+    </div>
+
+
+    <script>
+       
+        let result = document.getElementById('result');
+
+        let numValue = document.getElementById('num');
+
+        function textGenerater(){
+            result.innerHTML = ""
+            if(numValue.value ==""){
+                numValue.style.border = "2px solid red"
+
+            }
+            else{
+                 for(let i = 0; i<numValue.value;i++){
+                 let paragraph = document.createElement('h1')
+                 paragraph.innerText = "this the generated text"
+                 result.appendChild(paragraph)
+         }
+            // let image = document.createElement('img')
+            // image.src = numValue.value;
+            // result.appendChild(image)
+        }
+          
+        }
+    </script>
+</body>
+</html>
