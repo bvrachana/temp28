@@ -7,7 +7,8 @@
 </head>
 <body>
    <label for="number">select</label>
-   <select name="" id="number">
+   <input type="number" id="number">
+   <!-- <select name="" id="number">
     <option value="" disabled selected>select</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -20,7 +21,7 @@
     <option value="9">9</option>
     <option value="10">10</option>
 
-   </select>
+   </select> -->
    <button onclick="generatetable()">Generate Table</button>
    <table id="table" border="1" cellspacing="0" cellpadding="15"></table>
    <script>
@@ -28,7 +29,7 @@
     var number = document.getElementById('number').value;
     var table = document.getElementById('table');
 
-    for(i=1; i<10; i++){
+    for(i=1; i<number; i++){
       table.innerHTML += `<tr><td>${number}*${i} = ${i*number}</td></tr>`
     }
     }
