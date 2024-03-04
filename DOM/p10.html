@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li>Bread</li>
+        <li class="tick">Cofee0</li>
+        <li>pineapple cake</li>
+    </ul>
+    <ul id="test">
+        <li>Bread</li>
+        <li class="tick">Cofee1</li>
+        <li>pineapple cake</li>
+    </ul>
+
+    <script>
+        let match1 = document.querySelector('li.tick') //single element selectingg
+        console.log(match1.innerText)
+        match1.style.backgroundColor = "red"
+        match1.style.padding = "30px"
+        match1.style.color = "white"
+
+        document.write(`<p>querySelector() result : ${match1}</p>`)
+        document.write(`<p>querySelector() result length: ${match1.length}</p>`)
+        document.write(`<p>querySelector() result  length: ${match1.innerText.length}</p>`)
+       
+
+        //selecting multiple queries using queryselectorAll function
+        let match2 = document.querySelectorAll('li.tick')
+        console.log('match2[1].innerText')
+
+        //using for in method to read all the elements in arrays
+        for(key in match2){
+            console.log("value",match2[key].innerText)
+            match2[key].style.textDecoration = "underline"
+
+            //getting values or text without using any assign operatot
+            console.log(match2[0].style.textDecoration)
+            console.log(match2[0].innerText)
+        }
+        
+
+
+    </script>
+</body>
+</html>
