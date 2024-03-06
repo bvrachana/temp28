@@ -26,6 +26,19 @@
             height: 300px;
             color: aliceblue;
         }
+
+
+
+
+        /*example2  */
+        .visible{
+            display: none;
+        }
+        .firstclass{
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
@@ -35,7 +48,11 @@
 
     <div id="info" class="class1">Something is very important</div>
     <button onclick="addClass()">change</button>
-
+   
+    <hr>
+   <div id="example2" class="firstclass">
+    <h1>Example</h1></div>
+    <button onclick="handleToggle()">click</button>
     <script>
         let element = document.querySelector('#info');
         element.className += " class2"
@@ -44,9 +61,15 @@
         function addClass(){
             element.classList.add('class3');  // adding new classnames
             element.classList.remove('class1');  //remove classname
-
         }
+         
+        element.classList.add('hide')
+        element.classList.add("hide", "class3", "class4", "class5", "class2")
 
+        let example2Tag = document.querySelector('#example2')
+        function handleToggle(){
+            example2Tag.classList.toggle('visible')
+        }
     </script>
 </body>
 </html>

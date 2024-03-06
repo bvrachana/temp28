@@ -12,15 +12,14 @@
     <hr>
     <input type="text" name="username" id="name" placeholder="ur name" value="">
     <div id="result"></div>
-
     <script>
         let textBox = document.getElementById('name');
         //console.log(textBox.getAttribute('type'));
         var result = document.getElementById('result');
-        result.innerHTML = `<h1> the name of input is <span style="color:green">${textBox.getAttribute('type')}</span></h1>`
-        result.innerHTML += `<h1> the name of input is <span style="color:green">${textBox.getAttribute('id')}</span></h1>`
-        result.innerHTML += `<h1> the name of input is <span style="color:green">${textBox.getAttribute('placeholder')}</span></h1>`
-        result.innerHTML += `<h1> the name of input is <span style="color:green">${textBox.getAttribute('name')}</span></h1>`
+        result.innerHTML = `<h1>the name of input is <span style="color:green">${textBox.getAttribute('type')}</span></h1>`
+        result.innerHTML += `<h1>the name of input is <span style="color:green">${textBox.getAttribute('id')}</span></h1>`
+        result.innerHTML += `<h1>the name of input is <span style="color:green">${textBox.getAttribute('placeholder')}</span></h1>`
+        result.innerHTML += `<h1>the name of input is <span style="color:green">${textBox.getAttribute('name')}</span></h1>`
          console.log(textBox.getAttribute('id'));   
 
          //to assign new value to attribut

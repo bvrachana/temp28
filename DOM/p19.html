@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Window.close() and Window.open()</h1>
+    </center>
+
+    <button type="button" onclick="openhandler()">Open</button>
+    <button type="button" onclick=" closehandler()">Close</button>
+ 
+    <script>
+        var webStates;
+         function openhandler(){
+          webStates = open('https://gitub.com')
+          console.log('website state', webStates)
+         }
+
+         function closehandler(){
+            // webStates = close()
+
+            console.log('website states', webStates)
+            webStates.close()
+            }
+    </script>
+</body>
+</html>

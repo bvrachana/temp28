@@ -28,10 +28,11 @@
         result.innerHTML = `<h1 class="lang" id="lang">${document.documentElement.getAttribute('lang')}</h1>`
 
         //printing firstchild name
-        console.log(document.head.firstElementChild.nodeName)//the nodename is used to display that value to string
+        document.write(document.head.firstElementChild.nodeName)
+        //the nodename is used to display that value to string
 
         console.log(document.title)  //to select title
-        document.title="hello"   //to assaigning value to title
+        // document.title="hello"   //to assaigning value to title
         console.log(document.title)  //to select title
      </script>
 </body>

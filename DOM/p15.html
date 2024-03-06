@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styles</title>
+</head>
+<body>
+    <center>
+        <h1>Giving styles to my any elements from script</h1>
+    </center>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates repellat suscipit ea facilis est ratione quod ex voluptate non, corrupti possimus eveniet magnam voluptas nostrum, illum sed. Aperiam, quibusdam.
+    Officiis, pariatur blanditiis. Ex architecto commodi totam libero quaerat, fugiat incidunt id natus hic quam doloribus animi laboriosam earum reiciendis repellat, repellendus aperiam maxime alias! In veniam molestiae quas ut!
+    Consectetur cumque, ut hic doloribus porro nisi! Maxime ex nisi labore quasi impedit modi explicabo doloremque, aspernatur quod doloribus quibusdam corporis eum. Labore a quidem, veniam necessitatibus beatae quae modi.
+    Voluptate, quae earum a tempora maxime nulla eligendi recusandae? Incidunt vel exercitationem iure tenetur iusto et quasi voluptatem, architecto doloremque, veritatis distinctio, natus quae? Aperiam qui vel at illum nihil!
+    Vel illum, nam eaque rerum animi molestias architecto omnis eligendi vero enim quisquam hic reprehenderit nesciunt aspernatur dolore et. Fuga quaerat repellendus praesentium minus. Debitis quia animi id consequuntur provident.
+    Similique, alias! Qui maiores ad labore consequuntur, deleniti commodi! Sequi sint maiores eum vel quis quae doloribus nemo, obcaecati ab sed odio perferendis totam adipisci, dolore ullam natus, quam fugiat.
+    Ut perspiciatis veritatis ad repellendus maxime dolor in recusandae minus exercitationem sint consequatur ea rerum, impedit eius sunt aliquam nesciunt ipsum cum suscipit quae placeat! Dolorem quas voluptates libero fuga.
+    Sed perferendis necessitatibus aut similique deserunt incidunt architecto facilis id nisi, eum quibusdam quasi totam quia. Culpa, enim incidunt dignissimos maiores vel cupiditate odio quam, modi placeat sunt qui quibusdam.
+    Voluptatem distinctio provident ab. Cumque illo deserunt aliquam asperiores ratione placeat natus aspernatur, quo numquam ipsum. Maxime rerum debitis a iure, vitae doloribus distinctio ipsam id odio dolor, velit aliquid?
+    Sapiente laboriosam nihil perferendis consequatur unde non eum quasi, rem nobis sit delectus architecto ducimus doloribus fugiat et labore minima eaque! Accusamus amet et animi similique quae! Quos, voluptatibus quas.</p>
+  <button onclick="setColorToBody()">change body color</button>
+
+  <button onclick="darkThemeHandler('#fff', '#000')">Light Theme</button>
+  <button onclick="darkThemeHandler('#000', '#fff')">Dark Theme</button>
+
+    <script>
+        function setColorToBody(){
+            document.body.style.background = "linear-gradient(45deg, purple, pink)"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.body.style.height="100vh"
+        
+        }
+
+        function darkThemeHandler(background,color){
+          document.body.style.background =  background;
+          document.body.style.color =  color;
+
+        }
+    </script>
+</body>
+</html>
