@@ -24,11 +24,11 @@
 
         function textGenerater(){
             result.innerHTML = ""
-            if(numValue.value ==""){
+            if(numValue.value == ""){
                 numValue.style.border = "2px solid red"
              }
             else{
-                 for(let i = 0; i<numValue.value;i++){
+             for(let i = 0; i<numValue.value; i++){
              let image = document.createElement('img')
              image.src = url.value;
              result.appendChild(image)

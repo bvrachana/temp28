@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <button onclick="goforward()">go forward</button>
+
+    <button onclick="goback()">go backward</button>
+
+
+    <script>
+        let result=document.getElementById("result");
+        console.log(result);
+        result.innerHTML=`<h1>you have  ${history.length}web pages in this session</h1>`;
+
+        function goforward(){
+            window.history.forward();
+        }
+        function goback(){
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

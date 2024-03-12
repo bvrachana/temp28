@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #message{
+            width: 300px;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: green;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            color: #fff;
+            /* display: none; */
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Navigator (browser information and os information)</h1>
+    </center>
+    <div id="result">
+
+    </div>
+
+    <div id="message" class="hide" >
+        <p style="font-size: 15px;" onclick="onlinechecker()">&times;</p>
+        <h4>User is online</h4>
+    </div>
+    <button onclick="onlinechecker()">online chekcer</button>
+    <script>
+        let result= document.getElementById("result");
+        console.log(navigator);
+        result.innerHTML+=`<h3>navigator.language:${navigator.language}</h3>`
+        result.innerHTML+=`<h3>navigator.onLine:${navigator.onLine}</h3>`
+        result.innerHTML+=`<h3>navigator.platform:${navigator.platform}</h3>`
+        result.innerHTML+=`<h3>navigator.language:${navigator.language}</h3>`
+        result.innerHTML+=`<h3>navigator.appName:${navigator.appName}</h3>`
+        result.innerHTML+=`<h3>navigator.cookieEnabled:${navigator.cookieEnabled}</h3>`
+        
+        let message = document.querySelector('#message');
+       function onlinechecker(){
+        if(navigator.onLine==true){
+            message.style.background="green";
+            message.classList.toggle('hide');
+        }
+       }
+    </script>
+</body>
+</html>

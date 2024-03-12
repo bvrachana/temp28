@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="loginpage()">click to login</button> 
+   <button onclick="createpage()">click to create</button> 
+  <script>
+    let myWindow;
+    let windowProps = "window=300, height=300, top=10, left=10, toolbar=yes, scrollable=yes, resizable=yes"
+    function loginpage(){
+    myWindow = window.open('./logincredential.html', "", windowProps )
+    }
+    function createpage(){
+        myWindow = window.open('./create.html', "", windowProps)
+    }
+    function newwindow(){
+        myWindow = window.open('./example.html', "")
+    }
+  </script>
+</body>
+</html>
