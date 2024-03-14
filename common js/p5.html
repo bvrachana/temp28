@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            width: fit-content;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Object Array (array of objects)</h1>
+    </center>
+             <div id="result">
+
+             </div>
+
+
+    <script>
+        //object is key:value this time are calling property
+        let students = {
+            studentname:"exampleStudent",
+            studentAdress:"banglore",
+            phoneNumber:9019540562,
+            age:18,
+            passed:true,
+            marks:{
+                kannada:80,
+                English:60,
+                Hindi:85,
+                Tamil:70,
+            }
+
+        }
+        let result = document.querySelector('#result');
+result.innerHTML = typeof students
+result.innerHTML += `
+<div class = "card">
+    <h1>studentname : ${students.studentname}</h1>
+    <h1>studentadress : ${students.studentAdress}</h1>
+  <p>Age:${students.age}</p>
+  <p>mobile: ${students.age}</p>
+  <p style = "color:${students.passed==true?("green"):("red")}">Passed: ${students.passed==true?("student status is not good"):("student status is not good")}<p>
+    <table border="1" cellspacing="0" cellpadding="15">
+    <tr>
+        <th>Kannada</th>
+        <th>English</th>
+        <th>Hindi</th>
+        <th>Tamil</th>
+    </tr>
+    <tr>
+        <td>${students.marks.kannada}</td>
+        <td>${students.marks.English}</td>
+        <td>${students.marks.Hindi}</td>
+        <td>${students.marks.Tamil}</td>
+
+    </tr>
+</table>
+
+
+</div>`
+
+    </script>
+</body>
+</html>

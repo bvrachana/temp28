@@ -1,0 +1,12 @@
+1)instagram posts using array of objects store single post insidethe object and multiple posts inside the array.
+2)create followers list using array of object 
+3)create meesho product details single product details store insde the object multiple details store insde the array of object
+4)job portal single job is one object the multiple jobs is the array of object
+    - job role
+    -category
+    -salary
+    -ect..
+
+min object is 10
+
+-you college student portal data and display in container one student details using only obejct

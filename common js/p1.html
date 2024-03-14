@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .me{
+          display: flex;
+          align-items: end;
+          flex-direction: column;      
+        }
+        .me h1{
+        width: fit-content;
+        background: linear-gradient(45deg, #d43efe, #d80b23);
+        padding: 10px;
+        border-radius: 100px 10px 100px 100px;
+        color: #fff;
+
+        }
+        .you{
+            display: flex;
+          align-items: start;
+          flex-direction: column;
+        }
+        .you h1{
+            width: fit-content;
+        background-color: #fff;
+        box-shadow: 0px 5px 10px #ccc;
+        padding: 10px;
+        border-radius: 10px 100px 100px 100px;
+        color: #141414;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Array</h1> 
+        <!-- array is the collection of data, array is perform like a container -->
+        <!-- Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.Define the variable type with square brackets -->
+        <p>the array is the collection of data</p>
+        
+    </center>
+    <hr>
+    <h2>There are 3 types of arrays to create</h2>
+    <ul>
+        <li>Literal array
+        <ol>
+            <li>Literal</li>
+            <li>Array using Constructor</li>
+            <li>Array using Constructor with parameter</li>
+        </ol>
+        </li>
+
+        <li>Object array</li>
+        <li>JSON array</li>
+    </ul>
+
+    <script>
+        const messege = [
+            {
+                text:"hello",
+                time:"3:00pm",
+                isRead: true,
+                deliveredTime: "577",
+                sendBy : "me"
+           },
+           {
+           text:"where are you",
+           time:"4:00pm",
+           isRead:true,
+           deliveredTime:"88",
+           sendBy :"you"
+           },
+           {
+           text:"where are you",
+           time:"4:00pm",
+           isRead:true,
+           deliveredTime:"88",
+           sendBy :"you"
+           },
+           {
+           text:"Iam here only",
+           time:"4:00pm",
+           isRead:true,
+           deliveredTime:"88",
+           sendBy :"me"
+           },
+   ]
+   messege.map((item, index)=>{
+   document.body.innerHTML +=
+    `<div class ="${item.sendBy=="me"?"me":"you"}">
+    <h1>${item.text}</h1>
+    <small>${item.time}</small>
+    <span>${item.isRead}</span>
+    </div>`
+})
+    </script>
+
+</body> 
+</html>
+
+
+<!-- item place we can declare anything -->

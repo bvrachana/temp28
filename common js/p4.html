@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <script>
+        let result = document.querySelector('#result');
+
+        //array using constructor with parameter
+        let colors = new Array("red", "green", "yellow", "blue", 100, true);
+        console.log(colors);
+        result.innerHTML +=`<h1>${colors}</h1>`
+        result.innerHTML +=`<h1>${typeof(colors)}</h1>`
+
+        colors.map((item, index)=>{
+            result.innerHTML += `<h1>${item}</h1>`  //+index
+        })
+    </script>
+</body>
+</html>
