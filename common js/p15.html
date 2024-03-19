@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Without parameter, with return</h1>
+    </center>
+    <hr>
+    <div id="result">
+
+    </div>
+    <script>
+        function Factory(){
+            let material1 = "paper";
+        let material2 = "bag"
+            let product = material1 + material2;
+            //return(
+                product
+            // );
+            return product;
+        }
+        document.write(Factory())
+
+         function Calculate(){
+               let firstNumber = 10;
+               let secondNumber = 40;
+               let total1 = firstNumber + secondNumber;
+               let total2 = firstNumber - secondNumber;
+
+               return(
+                document.write(`<h1>${total1} and ${total2}</h1>`)
+               );
+         }
+         document.write(Calculate())
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       #result{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+       }
+           .card{
+            width: 350px;
+            box-shadow: 0px 0px 10px #ccc;
+            
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        img{
+            width: 300px;
+            object-fit: cover;
+        }
+        img:nth-child(3){
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <script>
+        let result = document.querySelector("#result")
+        let meesho = [
+            {
+                Image:"https://images.meesho.com/images/products/376145650/xfsyc_512.webp",
+                Name : " Bags Soft Material to Baby/Boys/Girls",
+                Price:"₹128",
+                Material : "Fabric",
+                NetQuantity : 1,
+                Sizes :  "Free Size",
+                CountryofOrigin : "India",
+
+ 
+            },
+            {
+                Image:"https://images.meesho.com/images/products/154077370/psv3p_512.webp",
+                Name : "Women's Applique Crepe Anarkali Dresses",
+                Price:"₹194",
+                Material:"Georgette",
+                NetQuantity  : 1,
+                Sizes:"M",
+                CountryofOrigin : "India",
+
+            },
+           
+{
+    Image:"https://images.meesho.com/images/products/156387711/dguki_512.webp",
+       Name:"Footwear",
+       Price:"₹277",
+       Material : "Solid",
+       NetQuantity:1,
+       Sizes:"IND-5",
+       CountryofOrigin : "China",
+},
+{
+    Image:"https://images.meesho.com/images/products/396300359/ojge3_512.webp",
+    Name : "Men's Casual Shoes",
+Material : "Suede Rubber",
+Price:"₹509",
+Sizes :  "IND-6, IND-7, IND-8, IND-9, IND-10",
+CountryofOrigin : "India",
+NetQuantity:2,
+},
+{
+                Image:"https://images.meesho.com/images/products/35623500/cuems_512.webp",
+                Name : "Home decoration",
+                Price:"₹414",
+                Material:"Crystal",
+                NetQuantity  : 1,
+                Sizes:"Free size",
+                CountryofOrigin : "India",
+
+            },
+            {
+                Image:"https://images.meesho.com/images/products/24839865/6c5e4_512.webp",
+                Name : "Classy Washing Machine Covers",
+                Price:"₹294",
+                Material:"Georgette",
+                NetQuantity  : 1,
+                Sizes:"Free size",
+                CountryofOrigin : "India",
+
+            },
+            {
+                Image:"https://images.meesho.com/images/products/394706466/3i33o_512.webp",
+                Name : "eye shadow",
+                Price:"₹648",
+                Material:"Solid",
+                NetQuantity  : 10,
+                Sizes:"Free size",
+                CountryofOrigin : "India",
+
+            },
+            {
+                Image:"https://images.meesho.com/images/products/187606419/yiqfb_512.webp",
+                Name : "Stylist Digital Watch for Men, Women",
+                Price:"₹173",
+                Material:"Rubber",
+                NetQuantity  : 15,
+                Sizes:"Free size",
+                CountryofOrigin : "India",
+
+            },
+
+ ]
+    meesho.map((item, index)=>{
+      result.innerHTML += `<div class="card">
+        <img src = "${item.Image}"></img>
+        <h3 style= "font-size:20px; margin-bottom:10px; padding:10px; text-align:center">Name:  ${item.Name}</h3>
+        <p style="font-size:20px; margin-bottom:10px">Material:${item.Material}</p>
+        <h3 style=" margin-bottom:10px">Price:${item.Price}</h3>
+        <h5 style=" margin-bottom:5px; font-size:20px">Size:${item.Sizes}</h5>
+        <p style=" margin-bottom:5px>Country of oigin:${item.CountryofOrigin}</p>
+        <i style=" margin-bottom:5px>NetQuantity:${item.NetQuantity}</i>
+        
+        </div> `
+    })    
+    </script>
+</body>
+</html>

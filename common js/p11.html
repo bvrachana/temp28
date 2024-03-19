@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>IF ELSE LADDER</h1>
+    </center>
+
+    <div id="result">
+        
+    </div>
+
+    <script>
+        let firstNumber = prompt('Enter the first number')
+        let secondNumber = prompt('Enter the second number')
+        
+        let total = Number(firstNumber) + Number(secondNumber)
+        let result = document.getElementById('result');
+
+        console.log(Number(firstNumber));
+        console.log(total);
+        if(Number(firstNumber) === Number(secondNumber)){
+ result.innerHTML = `<h1>Enter Valid Data</h1>`
+        }
+       else if(Number(firstNumber) > Number(secondNumber)){
+ result.innerHTML = `<h1>${firstNumber} is grater than to the ${secondNumber}</h1>`
+        }
+       
+        else if(Number(firstNumber) !== Number(secondNumber)){
+ result.innerHTML = `<h1>${firstNumber} is Not equal to the ${secondNumber}</h1>`
+        }
+        else{
+            result.innerHTML `<h1>Enter Valid Data</h1>`
+        }
+
+        
+    </script>
+</body>
+</html>
