@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+          
+        }
+  form{
+    width: 400px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+ }
+ input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+ }
+ input[type="radio"]{
+    width: fit-content;
+ }
+ .btns{
+    display: flex;
+    gap: 10px;
+ }
+ .btns button{
+  border: none;
+  outline: none;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: blue;
+  min-width: 150px;
+ font-size: 1rem;
+ border-radius: 100px;
+ }
+ .btns button:last-child{
+    flex: 1;
+    background-color: #ddd1d1;
+ }
+ </style>
+</head>
+<body>
+    <div class="container">
+       <form id="form">
+        <h3>Create a new Account</h3>
+        <label for="">Username</label>
+        <input type="text" name="username" id="name" placeholder="confirm name">
+
+        <label for="">Email</label>
+        <input type="text" name="email" id="email" placeholder="confirm email">
+
+        <label for="">range</label>
+        <input type="range" name="range" id="range" placeholder="confirm range">
+
+        <label for="">datetime-local</label>
+        <input type="datetime-local" name="date" id="date" placeholder="confirm date">
+
+        <label for="">Phone number</label>
+        <input type="tel" name="phone" id="phone" placeholder="confirm number" maxlength="10">
+
+        <label for="">Gender</label>
+        <select name="" id="gender">
+           <option value="male">male</option>
+           <option value="female">female</option>
+        </select>
+   
+         <label for="">Is it good</label>
+         <label for="">
+            <input type="radio" name="action" id="action1">
+            yes
+         </label>
+        <label for="">
+            <input type="radio" name="action" id="action2">
+            no
+         </label>
+
+        <div class="btns">
+            <button type="submit">Create</button>
+            <button type="reset">Cancel</button>
+         </div>
+       </form>  
+    </div>
+   
+   <script>
+        let name = document.querySelector('#name');
+        let email = document.querySelector('#email');
+        let phone = document.querySelector('#phone');
+        let range = document.querySelector('#range');
+        let datetime = document.querySelector('#date');
+        let gender = document.querySelector('#gender');
+        let action1 = document.querySelector('#action1');
+        let action2 = document.querySelector('#action2');
+       const submitHandler = (e)=>{
+        e.preventDefault(); //to prevent page refresh or page reload
+    //  const submitHandler(window.location.reload){
+    //   }
+
+        const user = {
+            username:name.value,
+            emailAdress:email.value,
+            mobile:phone.value,
+            gendervalue:gender.value,
+            action1:action1.checked,
+            action2:action2.checked
+        }
+        console.log(user);
+     }
+       document.getElementById('form').addEventListener('submit', submitHandler)
+       document.getElementById('form').addEventListener('reset', ()=>{
+        if(confirm('are sure want to reset the form?')){
+       alert('you clicked the ok')
+        }
+        else{
+            alert('you are cancelled.')
+        }
+        })
+    </script>
+</body>
+</html>

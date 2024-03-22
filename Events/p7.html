@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: teal;
+            color: #fff;
+            padding: 12px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onMouseWheel() and onScroll()</h1>
+    </center>
+   <p id="output"></p>
+
+   <button onclick="test()">scroll to top</button>
+
+    <div id="text" onscroll="WheelHandler()" onmousewheel="Wheelhandler()">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut del        ectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>      
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magni quia necessitatibus repellendus iusto aut delectus quo ratione quas, voluptatum laboriosam debitis hic numquam! Perferendis sit ad eum cum dicta?</p>
+    </div>
+    <script>
+        let output = document.getElementById('output')
+        let element = document.getElementById('text')
+
+        function Wheelhandler(){
+            output.innerHTML = element.scrollTop + 'px' //here wr are getting the value
+        }
+
+        function test(){
+            output.scrollTop= 0; //here we are setting the value
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even or Odd Check</title>
+    <body>
+        <h1>Even or Odd Check</h1>
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number">
+        <button onclick="checkEvenOrOdd()">Check</button>
+        <p id="result"></p>
+    <script>
+        function checkEvenOrOdd() {
+            var number = document.getElementById("number").value;
+            var result = document.getElementById("result");
+
+            if (number % 2 === 0) {
+                result.innerText = number + " is even.";
+            } else {
+                result.innerText = number + " is odd.";
+            }
+        }
+    </script>
+</head>
+</body>
+</html>

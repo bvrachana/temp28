@@ -23,16 +23,14 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
-
-    </select>
+  </select>
     <button onclick="tablegenerator()">generate table</button>
     <table id="testTable" border="1" cellpadding="10" cellspacing="0">
    <tr>
     <th>The i value is</th>
    </tr>
     </table>
-
-    <script>
+ <script>
         var i = 0; 
         //for(initialization condition increment or decrement ){
 
@@ -45,8 +43,7 @@
             <tr> <th>Head</th>
                 </tr>`
         
-        
-        for( var i = 1; i<10; i++){
+        for(var i = 1; i<10; i++){
            table.innerHTML += `<tr>
             <td>${selectNumber} * ${i} = ${i*selectNumber}</td>
             </tr>`
