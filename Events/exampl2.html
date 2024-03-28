@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        h2{
+            display: flex;
+            flex-direction: column;
+            float: left;
+        }
+        h3{
+           display: flex;
+            float: right;
+        }
+        .hide{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>watsapp Messeges</h1>
+    <ul id="chat">
+        <li type="none">
+            <h2 class="i" id="">Hii</h2>
+        </li><br>
+        <li type="none">
+            <h3 class="i">Hlo</h3>
+        </li> <br>
+        <li type="none">
+            <h2 class="i">How are you</h2>
+        </li> <br>
+        <li type="none">
+            <h3 class="i">Iam fine wt about you</h3>
+        </li> <br>
+        <li>
+           <input type="checkbox" id="" class="i">have your dinner?
+        </li> <br>
+    </ul>
+    <button onclick="deleter()">click to delete</button>
+    <script>
+        let chats = document.getElementById('chat');
+        let list = chats.querySelectorAll('li');
+        console.log(list);
+        for(i in list){
+            function deleter(){
+                if(list[i].querySelector('.i').checked == true){
+                    list[i].classList.add('hide')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

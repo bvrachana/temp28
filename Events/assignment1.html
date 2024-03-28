@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        form{
+            width: 300px;
+            display: flex;
+            padding: 10px;
+            box-shadow: 0 0 10px solid #ccc;
+            align-items: center;
+            justify-content: center;
+          
+        }
+       
+        .name label{
+           width: 100%;
+         
+          
+        }
+        form input{
+            width: 100%;
+            padding: 5px;
+        }
+        /* form input[type="text"]{
+           background-color: rgb(212, 22, 22);
+        
+
+        } */
+    </style>
+</head>
+<body>
+    <form action="" >
+        <div class="name">
+        <label for="firstname">firstname:</label><br>
+        <input type="text" id="firstname" name="firstname" onchange="onchangetext()"><br>
+        <label for="lastname">lastname:</label><br>
+           <input type="text" id="lastname" name="lastname"> 
+           <label for="email">Email:</label><br>
+           <input type="email" name="email" id="email">
+           <label for="phonenumber">Phone number:</label><br>
+           <input type="number" name="phonenumber" id="phonenumber">
+           <label for="password">Password:</label><br>
+           <input type="password" name="password" id="password">
+           <label for="date">date:</label><br>
+           <input type="date" name="date" id="date">
+        </div>
+    </form>
+<button>click</button>
+<p id="output"></p>
+    <script>
+        let firstname = document.getElementById('firstname')
+        let lastname = document.getElementById('lastname')
+        let email = document.getElementById('email')
+        let output = document.getElementById('output')
+        let phonenumber = document.getElementById('phonenumber')
+ 
+        
+        function onchangetext(){
+            if(firstname.value.length<8){
+                output.style.border = '1px solid red';
+                output.innerHTML = `please filled correct name`
+                alert('please correcr the letters')
+            }
+            else{
+                output.innerHTML = ``
+            }
+        }
+    </script>
+</body>
+</html>

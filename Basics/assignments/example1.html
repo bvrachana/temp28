@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .quantity{
+            display: flex;
+            padding: 30px;
+            align-items: center;
+            gap: 10px;
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 30px;
+            height: 30px;
+            font-size: 1.3rem;
+            background-color: rgb(255, 25, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+        }
+        button:active{
+            transform: scale(0.9);
+            box-shadow: 0px 5px 10px rgba(255, 25, 0, 0.484);
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input:hover{
+            background-color: rgba(255, 25, 0, 0.176);
+            border: 1px solid rgb(255, 25, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quantity">
+            <button onclick="lessQuantity()">-</button>
+            <input type="number" id="quantity" placeholder="Quantity" readonly>
+            <button onclick="addQuantity()">+</button>
+        </div>
+    </div>
+    <script>
+        let num = 1;
+        let quantity = document.getElementById('quantity');
+        function addQuantity(){
+            if(num<=30){
+                num++;
+                quantity.value = num;
+            }
+            else{
+               alert('you are reached maximum quantity.....!')
+            }
+        }
+        function lessQuantity(){
+            if(num>=0){
+                num--;
+                quantity.value = num;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul id="chat">
+        <li>
+            <input type="checkbox" id="" class="i">
+        </li>
+        <li>
+            <input type="checkbox" id="" class="i">
+        </li>
+        <li>
+            <input type="checkbox" id="" class="i">
+        </li>
+        <li>
+            <input type="checkbox" id="" class="i">
+        </li>
+    </ul>
+    <button onclick="deleter()">delete</button>
+    <script>
+        let chats = document.getElementById('chat');
+        let list = chats.querySelectorAll('li')
+        function deleter(){
+            for(k in list){
+                if(list[k].querySelector('.i').checked==true){
+                    list[k].classList.add('hide')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

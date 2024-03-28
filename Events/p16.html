@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            play(), pause() and fullscreen()
+        </h1>
+    </center>
+    <video src="./pexels-sevie-7125268 (2160p).mp4" id="video"></video>
+
+    <button onclick="playHandler()">play</button>
+    <button onclick="pauseHandler()">pause</button>
+    <button onclick="backwardvideo()"><<</button>
+    <button onclick="forwardvideo()">>></button>
+    <button id="volume">Mute</button>
+    <span id="time"></span>
+    <input type="range" id="range">
+    <span id="d"></span>
+
+    <script>
+        let video = document.getElementById('video')
+        let time = document.getElementById('time');
+        let du = document.getElementById('d');
+        let range = document.getElementById('range')
+
+       function setvideoTime() {
+        time.innerText = Math.round(video.currentTime) //to make rounded numbers like removing decimals
+        du.innerText = Math.round(video.duration) + ':00s'
+        range.setAttribute('max', Math.round(video.duration))
+        range.setAttribute('value', Math.round(video.currentduration))
+
+       } 
+       setInterval('setvideoTime()', 100)
+
+       range.addEventListener('input',function(){
+        video.currentTime = range.value;
+        range.value = video.currentTime
+       })
+ 
+      
+        function playHandler(){
+            video.play()
+        }
+       function pauseHandler(){
+        video.pause()
+       }
+
+       function forwardvideo(){
+        //video.currentTime = video.currentTime + 5
+        video.currentTime += 5; 
+       }
+       function backwardvideo(){
+        video.currentTime -= 5;
+       }
+
+
+   document.addEventListener('keydown', function(event){
+    console.log(event.key);
+    event.preventDefault()
+    if(event.key === 32  || event.key === ""){
+      video.pause();
+    }
+    if(event.key === 'M' || event.key === 'm'){
+    video.muted = true;
+   }
+   
+    if(event.key === 'U' || event.key === 'u'){
+    video.muted = false;
+   }
+
+   
+    if(event.key === 'ArrowRight'){
+        video.currentTime += 2 
+    }
+    if(event.key === 'ArrowLeft'){
+        video.currentTime -= 2 
+    }
+    if(event.key === 'P' || event.key === 'p'){
+        video.play()
+    }
+    console.log(event.key);
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body oncontextmenu="contextHandler(event)">
+    <h3>onContextMenu()</h3>
+
+    <div class="btk" id="btk" >
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis libero natus corrupti aspernatur beatae odit, nobis perferendis. Laudantium pariatur, fugit excepturi impedit placeat cumque doloribus cum reiciendis temporibus quisquam quaerat labore, nesciunt laborum! Tenetur quos quaerat quibusdam temporibus molestiae porro dolor aspernatur enim nulla labore accusamus iste neque, dolores dolore molestias magnam eum earum, odit iure, animi consectetur odio sapiente quasi! Similique amet iste id, unde nam corrupti laboriosam minima.</p>
+    </div>
+
+    <script>
+        let btk = document.getElementById('btk');
+        function contextHandler(event){
+               event.preventDefault();   //to avoid page reload or refresh
+               alert('right click has disabled')
+            //    btk.style.backgroundColor = 'red';
+
+        }
+    </script>
+</body>
+</html>

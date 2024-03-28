@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: teal;
+        }
+    </style>
+</head>
+<body> 
+    <div class="card" onclick="see(this)">
+        <h1 class="list">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, laboriosam? Consectetur minima velit accusantium sit iusto hic deleniti aperiam eligendi?
+        </h1>
+    </div>
+    <script>
+        function see(div){
+            div.classList.add('active');
+            alert(div.queryselector('.list').innerHTML)
+            div.classList.remove('active');
+    
+        }
+    </script>
+</body>
+</html>
