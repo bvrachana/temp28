@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            
+        }
+        .card{
+            display: grid;
+            width: 800px;
+            grid-template-columns: repeat(2,1fr);
+           padding: 20px;
+           
+  }
+        .card-left, .card-right{
+           border: 1px solid #ccc;
+           padding: 20px;
+           min-height: 60vh;
+           
+          
+          
+        }
+        .card-left{
+            border-top-left-radius: 10px;
+           border-bottom-left-radius: 10px;
+          
+        }
+        .card-right{
+            background-color: rgb(63, 63, 216);
+            border-top-right-radius: 10px;
+           border-bottom-right-radius: 10px;
+          
+        }
+        h1{
+            font-size: 1.3rem;
+            color: rgb(58, 58, 230);
+            margin-bottom: 20px;
+        }
+        .heading{
+            color: white;
+        }
+        .Title, .employee, .position{
+            width: 100%;
+            color: rgb(106, 104, 104);
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #cac9c9;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding: 5px;
+        }
+        .country, .place{
+            width: 100%;
+            background-color: rgb(63, 63, 216);
+           
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #cac9c9;
+            margin-bottom: 10px;
+            font-weight: 400;
+            padding: 5px;
+            
+        }
+        .name, .buisness{
+            display: flex;
+            gap: 20px;
+        }
+        select{
+            color: rgb(126, 115, 115);
+        }
+        input{
+            border: none;
+            outline: none;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #cac9c9;
+        }
+        .code{
+            border: none;
+            outline: none;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: rgb(63, 63, 216);
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e6dcdc;
+        }
+        p{
+            margin-top: 10px;
+        }
+       button{
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+    padding: 5px;
+    
+       }
+       @media(max-width:576px){
+            .card{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .container{
+                padding: 5px;
+            }
+        }
+
+        @media(max-width:576px){
+           .name{
+            flex-direction: column;
+           }
+            
+        }
+
+       .btn{
+        border: none;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 10px;
+    width: 50%;
+    margin-top: 20px;
+       }
+       .btn:hover{
+            border: 1px solid #090925;
+            box-shadow: 0 0 10px #ccc;
+            background-color: transparent;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-left">
+            <h1 class="main-heading">General Information</h1>
+             <form>
+                
+                
+               
+                <select class="Title" id="Title">
+                    
+                <option Title value="/">Title</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+
+            </select>
+            
+            <div class="name">
+                <input type="text" placeholder="Firstname">
+                <input type="text" placeholder="Lastname">
+
+            </div>
+            
+            <select  class="position" id="Position"> 
+                <option value="/">Position</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+                <option value="/">option</option>
+
+            </select>
+            <br>
+            <input type="text" placeholder="Company">
+            <div class="buisness" >
+            <input type="text" placeholder="Buisness Arena" oninput="TitleHandler(event)"> 
+            <select class="employee" id="employee">
+            <option value="/">Employee</option>
+        </select>
+        </div>
+        <strong id="result"></strong>
+             </form>
+
+            </div>
+
+            <div class="card-right">
+ <h1 class="heading">Contact Details</h1>
+ <input class="code" type="text" placeholder="Street +Nr">
+ <input  class="code" type="text" placeholder="Additional information">
+ <div class="name">
+ <input class="code"  type="text" placeholder="Zip code">
+ <select class="place" id="">
+    <option value="/">Place</option>
+    <option value="/">option</option>
+ </select>
+ </div>
+ <select class="country" id="country">
+    <option value="/">Country</option>
+    <option value="/">option</option>
+ </select>
+ <div class="name">
+    <input class="code" type="text" placeholder="code+">
+    <input class="code" type="text" placeholder="phone number">
+
+ </div>
+ <input class="code" type="email" placeholder="your email">
+ <p><button></button>   I do accepted the terms and conditions of your site</p>
+ <button class="btn">Register badge</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let buisness = document.querySelector('buisness')
+        let result = document.getElementById('result');
+ 
+        function TitleHandler(e){
+         e.preventdefault(e);  
+         if(buisness.value.length === 3) 
+         result.innerHTML = "please enter the valid name"   
+        buisness.style.border="red"
+        }
+        
+
+    </script>
+</body>
+</html>
