@@ -144,6 +144,7 @@
             background-color: transparent;
             color: #000;
         }
+    
     </style>
 </head>
 <body>
@@ -182,7 +183,7 @@
             <br>
             <input type="text" placeholder="Company">
             <div class="buisness" >
-            <input type="text" placeholder="Buisness Arena" oninput="TitleHandler(event)"> 
+            <input type="text" placeholder="Buisness Arena" id="buisness" oninput="TitleHandler(event)"> 
             <select class="employee" id="employee">
             <option value="/">Employee</option>
         </select>
@@ -213,21 +214,23 @@
 
  </div>
  <input class="code" type="email" placeholder="your email">
- <p><button></button>   I do accepted the terms and conditions of your site</p>
+ 
+ <p>I do accepted the terms and conditions of your site</p>
  <button class="btn">Register badge</button>
             </div>
         </div>
     </div>
 
     <script>
-        let buisness = document.querySelector('buisness')
+        let buisness = document.getElementById('buisness')
         let result = document.getElementById('result');
  
         function TitleHandler(e){
-         e.preventdefault(e);  
-         if(buisness.value.length === 3) 
+         e.preventDefault(e);  
+         if(buisness.value.length === 5) 
          result.innerHTML = "please enter the valid name"   
-        buisness.style.border="red"
+        buisness.style.border="red";
+        result.style.color = "red"
         }
         
 

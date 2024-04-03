@@ -18,12 +18,11 @@
          showAlert();     //setInterval is used to run any code at everytime
          setInterval('showAlert()', 5000) //1000milli seconds = 1s // 
          
-        //the settimeout function is used to run any code after sometime
-        function simpleAlert(){
+   //the settimeout function is used to run any code after sometime
+      function simpleAlert(){
              alert('this is the last messege!')
         }
-
-        function delayedAlert(){
+      function delayedAlert(){
             setTimeout('simpleAlert', 2000)
         }
         simpleAlert();
