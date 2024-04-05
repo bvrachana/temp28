@@ -131,8 +131,8 @@
                 error1.innerText = "please fill this field.."
                 secondNumber.style.border = "2px solid red"
                 error2.innerText = "please fill this field.."
-                        }
-            else if(secondNumber.value == "" || secondNumber.value.length ==0 ){
+          }
+            else if(secondNumber.value == "" || secondNumber.value.length == 0 ){
                 firstNumber.style.border = "2px solid green"
                 error1.innerText = ""
                 secondNumber.style.border = "2px solid red"
@@ -145,7 +145,7 @@
                 secondNumber.style.border = "2px solid green"
             }
 
-            switch (operation.value){
+            switch(operation.value){
                 case 'add':
                     result.innerHTML = `<h1>${Number(firstNumber.value) + Number(secondNumber.value)}</h1>`
                     break;

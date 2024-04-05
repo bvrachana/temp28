@@ -9,14 +9,12 @@
     <center>
         <h1>POLINDROME</h1>
     </center>
-
-    <script>
+   <script>
         let str = prompt('enter any string to check the polindrome or not..') //the string is like attry we can read the string indexe using array method (ex: str[0] //utput is h)
         let temp = ''
         //for(let i=0; i<5; i++)
         for(let i=str.length-1; i>=0; i--){
-          
-            temp+=str[i]
+           temp+=str[i];
         } 
         console.log(temp);
         if(str==temp){
