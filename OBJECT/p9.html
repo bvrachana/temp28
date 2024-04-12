@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object.assign()</h1>
+    </center>
+    <hr>
+
+    <script>
+        let user1 = {
+            name : "Rohan",
+            email:"rohan@gamil.com",
+        }
+
+        let user2 = {
+            age:23,
+            email:"rohan@gmail.com"
+        }
+        // result = {
+        //     name : "Rohan",
+        //     email:"rohan@gamil.com",
+        //     age:23,
+        //     email:"rohan@gmail.com"
+        // }
+
+        console.log('user1 = ',user1)
+        console.log('user2 = ',user2)
+ 
+//merges the properties of an objects, it hold last property if any common property exists.
+        let result = Object.assign(user1, user2)
+        console.log('result =', result);
+
+    </script>
+</body>
+</html>

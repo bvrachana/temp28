@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By using an object constructor (constructor parameter)</h1>
+    </center>
+    <hr>
+    <h1>Example1</h1>
+
+    <script>
+        let employeeDetails = new Object({
+            firstname:"tejas",
+            lastname:"Rav",
+            fullname:function(){
+                return this.firstname + "" + this.lastname;
+            }
+
+        });
+        document.write(typeof employeeDetails + "<br>")
+        document.write(employeeDetails.firstname + "<br>")
+        document.write(employeeDetails.lastname + "<br>")
+        document.write(employeeDetails.fullname() + "<br>")
+ 
+
+    </script>
+
+    <h1>example2</h1>
+    <script>
+        function studentDetails(firstname, lastname){
+         let fn, ln, fullname;
+//this is used pointing to current variables/values
+         this.fn = firstname;
+         this.ln = lastname;
+         this.fullname = this.fn + "" + this.ln;
+
+         console.log('fn' + fn)
+         console.log('ln' + ln)
+         console.log('fullname' + fullname)
+
+        }
+        let student = new studentDetails('Html', 'css'); //object
+        document.write(typeof student)
+        document.write(`<h1>${student.fn}</h1>`)
+        document.write(`<h1>${student.ln}</h1>`)
+        document.write(`<h1>${student.fullname}</h1>`)
+
+    </script>
+</body>
+</html>

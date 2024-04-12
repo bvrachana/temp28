@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object.defineProperties()</h1>
+    </center>
+    <hr>
+
+    <script>
+        //will allow to add more than one set of properties from outside the object
+
+        var user = {
+            name : "Ramesh"
+        };
+    //    //Object.defineProperty(user, 'email', {
+    //     value:'ramesh@gmail.com'
+    //    })
+
+    Object.defineProperties(user, {
+        email:{
+            value:'ramesh@gmail.com'
+        },
+        age:{
+            value:23
+        },
+        mobile:{
+            value:'+919019540562'
+        }
+    })
+    console.log(user);
+    console.log(user.name);
+    console.log(user.email);
+    console.log(user.mobile);
+    console.log(user.age);
+
+
+        
+    </script>
+</body>
+</html>

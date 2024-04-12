@@ -14,8 +14,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-       
-        .post{
+     .post{
            box-shadow: 0px 0px 10px #ccc;
            padding: 10px;
            margin-bottom: 15px;
@@ -40,9 +39,7 @@
         .dots{
         display: flex;
       justify-content: space-between;
-      
-      
-        }
+       }
         .fa-ellipsis-vertical{
          font-size: 20px;
          margin-top: 10px;
@@ -56,11 +53,9 @@
             border-radius: 10px;
             padding: 10px;
         }
-        
-        .profilename{
+       .profilename{
           font-size: 15px;
         }
-       
         img{
             width: 400px;
         }
@@ -70,15 +65,11 @@
         .fa-comment{
             font-size: 20px;
             margin-left: 10px;
-            
         }
          .footer{
             padding: 15px;
-            
-            
-        } 
-        
-        .fa-bookmark, .fa-download{
+         } 
+       .fa-bookmark, .fa-download{
             font-size: 20px;
             display: flex;
             float: right;
@@ -101,26 +92,17 @@
         }
          @media(max-width:768px){
            .post{
-            
             width: 100%;
-            
            }
         } 
     </style>
-
 </head>
 <body>
     <center>
         <h1>Instagram</h1>
-        
-
-
-
     </center>
     <div class="result" id="result">
- 
-    </div>
-   
+  </div>
 </body>
 <script>
     let result = document.querySelector("#result");
@@ -197,7 +179,6 @@
     postlargeImage:"https://thumbs.dreamstime.com/b/revenue-increase-sales-financial-growth-business-concept-virtual-screen-153370037.jpg",
     icon:"",
 },
-
 ]
  
  instagram.map((items, index)=>{
@@ -205,9 +186,8 @@
   `<section class = "post">
   <div class="profile">
         
-    <img src= "${items.Image}"></img>
-
-<div class = "profilename">
+   <img src = "${items.Image}"></img>
+   <div class = "profilename">
   <h3>${items.profilename}</h3>
   <small>${items.description}</small>
   </div>
